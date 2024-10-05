@@ -71,7 +71,7 @@ def scrape_tiktok_by_keyword(keyword_list):
 
     for item in keyword_list:
         page.on('response', lambda response: handle_response(response, api_responses, '/api/search/general/full/'))
-        url_path = '/search?q=beautiful%20destinations&t=1728108845846'
+        url_path = '/search?q='+item.replace(' ','%20')+'&t=1728108845846'
         page.goto('https://www.tiktok.com'+url_path)
         # Perform login or scraping actions here
         # page.wait_for_load_state('networkidle')

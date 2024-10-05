@@ -16,11 +16,6 @@ def main(platform):
         raise ValueError(f"Unsupported platform: {platform}")
 
 if __name__ == '__main__':
-    # Argument parser to select which platform scraper to run
-    # parser = argparse.ArgumentParser(description="Run a scraper for different platforms.")
-    # parser.add_argument('platform', type=str, help="Specify which platform to scrape: instagram, tiktok, facebook")
-    # args = parser.parse_args()
-
     try:
         # main(args.platform)
         main("tiktok")
